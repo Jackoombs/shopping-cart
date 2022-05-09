@@ -1,17 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import Product from "../components/Product";
 import { useEffect } from "react";
-import getHomePageItems from '../utils/apiCalls';
 
-function Shop() {
-  const getItems = async () => {
-    const items = await getHomePageItems()
-    console.log(items)
-  }
-  
+function Shop({products}) {
+
+
   return (
-    <div>
-      <h1>Shop page</h1>
-      <button onClick={getItems}>CLick Me</button>
+    <div className="products">
+      {products.map(product => {return <Product product={product}/>})}
     </div>
   )
 }

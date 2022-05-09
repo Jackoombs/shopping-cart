@@ -43,8 +43,8 @@ function Home() {
       </section>
       <section className="values">
         <div className="cards">
-          {cards.map(card => (
-            <InfoCard image={card.image} alt={card.alt} text={card.text} />
+          {cards.map((card, index) => (
+            <InfoCard key={index} image={card.image} alt={card.alt} text={card.text} />
           ))}
         </div>
       </section>
