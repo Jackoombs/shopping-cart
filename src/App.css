@@ -9,7 +9,7 @@
 }
 
 body {
-  background: linear-gradient(90deg, #22577E -10%, #5584AC 50%, #22577E 110%);
+  background: #e3e6eb;
   box-sizing: border-box;
   min-height: 100vh;
   min-width: fit-content;
@@ -19,34 +19,35 @@ body {
 }
 
 a {
-  color: white;
+  color: black;
   font-weight: 600;
 }
 
 .App {
   box-sizing: border-box;
-  padding: 2vw;
-  background-color: rgba(149, 209, 204, 0.6);
+  background-color: white;
   height: 100%;
   border-radius: 70px;
-  border: 3px solid white;
-  outline: 3px solid rgba(0, 0, 0, 0.2)
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow: hidden;
 }
 
 header {
+  background-color: #d4ebf0;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
+  padding: 2vw;
 }
 
 .logo {
-  color: white;
+  color: black;
 
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.logo h1 {
+.logo h3 {
   font-size: 3rem;
 }
 
@@ -69,8 +70,17 @@ nav ul {
   align-items: center;
 }
 
+nav a {
+  padding: 5px 10px;
+}
+
+.active {
+  outline: 2px solid black;
+  border-radius: 5px;
+}
+
 .nav-checkout {
-  color: white;
+  color: black;
   font-size: 1.75rem;
   justify-self: flex-end;
 
@@ -80,7 +90,7 @@ nav ul {
 }
 
 .cart-icon {
-  border: 2px white solid;
+  border: 2px black solid;
   height: fit-content;
   width: auto;
   aspect-ratio: 1/1;
@@ -90,4 +100,84 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.tagline {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+  
+}
+
+.hero {
+  color: black;
+  font-size: 5rem;
+  width: fit-content;
+  background-color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+h1 small {
+  font-size: 2.5rem;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero-right {
+  background-color: #d4ebf0;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 80px 100%);
+  padding: 2.5vw;
+  padding-left: 4vw;
+}
+
+.values{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr auto 1fr;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 3vw;
+  width: 60%;
+  justify-self: center;
+  grid-column: 2 / 3;
+}
+
+.info-card {
+  border: 1px #d4ebf0 solid;
+  border-bottom: 8px #d4ebf0 solid;
+  border-radius: 40px;
+  padding: 1vw;
+  align-self: center;
+  justify-self: center;
+  color: black;
+  font-size: 1.5rem;
+  text-align: center;
+  aspect-ratio: 3/4;
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.info-card img {
+  height: 150px;
+  width: auto;
 }
