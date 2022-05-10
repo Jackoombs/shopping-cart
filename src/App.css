@@ -8,12 +8,9 @@
   list-style: none;
 }
 
-body {
-  background: #e3e6eb;
-  box-sizing: border-box;
-  max-height: 100vh;
-  width: 100vw;
-  display: grid;
+html {
+  background-color: rgb(240, 235, 235);
+  overflow: hidden;
 }
 
 a {
@@ -27,8 +24,10 @@ a {
   border-radius: 70px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 3vw;
-  overflow-y: hidden;
-  
+  height: 87vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 header {
@@ -36,6 +35,14 @@ header {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   padding: 2vw;
+}
+
+.home {
+  margin: auto 0;
+}
+
+.product-page, .home {
+  overflow-y: auto;
 }
 
 .logo {
@@ -104,7 +111,6 @@ nav a {
 .tagline {
   display: flex;
   justify-content: center;
-  margin: 50px 0;
   
 }
 
@@ -145,7 +151,8 @@ h1 {
   justify-content: center;
   align-items: center;
   grid-template-columns: 1fr auto 1fr;
-  padding-bottom: 3vw;
+  padding: 1vw 0;
+  
 }
 
 .cards {
@@ -168,7 +175,7 @@ h1 {
   font-size: 1.5rem;
   text-align: center;
   aspect-ratio: 3/4;
-  max-width: 500px;
+  max-width: 400px;
 
   display: flex;
   flex-direction: column;

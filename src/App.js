@@ -32,7 +32,7 @@ function App() {
           <Route path="/" exact element={<Home />} />
           <Route path="/shop" element={<Shop products={products}/>} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </Router>
   );
