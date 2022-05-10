@@ -48,10 +48,6 @@ function Home() {
           ))}
         </div>
       </section>
-      <div>
-        <Link to={"/shop"}> SHOP NOW</Link>
-
-      </div>
     </main>
   )
 }

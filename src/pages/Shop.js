@@ -6,9 +6,11 @@ function Shop({products}) {
 
 
   return (
-    <div className="products">
-      {products.map(product => {return <Product product={product}/>})}
-    </div>
+    <section className="product-page">
+      <div className="products">
+        {products.map(product => {return <Product product={product}/>})}
+      </div>
+    </section>
   )
 }
 
