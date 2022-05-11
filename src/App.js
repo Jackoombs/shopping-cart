@@ -22,9 +22,6 @@ function App() {
     getItems()
   },[])
 
-  useEffect(() => {
-    const currentTotal = totalItems
-  },[basket])
 
   return (
     <Router>
