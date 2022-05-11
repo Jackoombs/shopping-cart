@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 function App() {
 
   const [products, setProducts] = useState([])
+  const [basket, setBasket] = useState([])
+  const [totalItems, setTotalItems] = useState(0)
 
   useEffect(() => {
     const getItems = async () => {
@@ -21,16 +23,16 @@ function App() {
   },[])
 
   useEffect(() => {
-    console.log(products)
-  },[products])
+    const currentTotal = totalItems
+  },[basket])
 
   return (
     <Router>
       <div className='App'>
-        <Nav />
+        <Nav basketCounter={basket.length}/>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/shop" element={<Shop products={products}/>} />
+          <Route path="/shop" element={<Shop products={products} setBasket={setBasket} basket={basket}/>} />
         </Routes>
         {/* <Footer /> */}
       </div>

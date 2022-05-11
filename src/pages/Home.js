@@ -1,6 +1,5 @@
 import React from "react";
 import InfoCard from "../components/InfoCard";
-import Robot from "../robot.png"
 import Bin from "../recycle-bin.png"
 import Helper from "../helper.png"
 import Plane from "../plane.png"
