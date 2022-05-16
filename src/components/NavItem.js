@@ -6,9 +6,7 @@ function NavItem({ page, route}) {
 
   return (
     <li>
-      <NavLink 
-        to={route}
-        >
+      <NavLink to={route}>
         {page}
       </NavLink>
     </li>
