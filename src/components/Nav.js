@@ -28,7 +28,7 @@ function Nav({ basketCounter }) {
         <p>Total amount</p>
         <div className="cart-icon">
           <FontAwesomeIcon icon={faShoppingCart} size="xs"/>
-          {basketCounter?<div className="basket-counter">{basketCounter}</div>:''}
+          {basketCounter?<div className="basket-counter"><p>{basketCounter}</p></div>:''}
         </div>
       </Link>
     </header>

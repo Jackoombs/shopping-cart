@@ -17,13 +17,19 @@ function AddToBasket({ product, quantity, basket, setBasket }) {
   const addNewBasketItem = () => {
     const newProduct = product
     newProduct.quantity = +quantity
-    setBasket( oldBasket => ([...oldBasket, newProduct]))
+    setBasket(oldBasket => [...oldBasket, newProduct])
   }
 
   const increaseBasketQuantity = () => {
-    const duplicateProduct = basket.filter(item => item.title === product.title)[0]
-    const newQuantity = duplicateProduct.quantity + quantity
-    duplicateProduct.quantity = newQuantity
+    const newBasket = [...basket]
+    const duplicateIndex = newBasket.findIndex(item => item.title === product.title)
+    const duplicate = newBasket[duplicateIndex]
+
+    duplicate.quantity = duplicate.quantity + quantity
+    newBasket.splice(duplicateIndex, 1)
+    newBasket.splice(duplicateIndex, 0, duplicate)
+
+    setBasket(newBasket)
   }
 
   return (
