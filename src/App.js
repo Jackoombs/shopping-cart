@@ -28,14 +28,13 @@ function App() {
       (previousValue, currentValue) => previousValue + currentValue,
       0
     );
-    console.log(numberOfItems)
+    setTotalItems(numberOfItems)
   },[basket])
-
 
   return (
     <Router>
       <div className='App'>
-        <Nav basketCounter={basket.length}/>
+        <Nav basketCounter={totalItems}/>
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/shop" element={<Shop products={products} setBasket={setBasket} basket={basket}/>} />
