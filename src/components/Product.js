@@ -2,16 +2,21 @@ import React, { useState } from "react";
 import StarRatings from 'react-star-ratings';
 import AddToBasket from "./AddToBasket";
 import QuantitySelector from "./QuantitySelector"
+import ProductModal from "./ProductModal";
 
 function Product({ product, id, basket, setBasket }) {
 
   const [quantity, setQuantity] = useState(1)
 
+  const clickHandler = (e) => {
+    
+  }
+
   return (
-    <div className="product">
+    <div className="product" onClick={clickHandler}>
       <img src={product.image} alt={product.description} />
       <h3>{product.title}</h3>
-      <p>description</p>
+      <p className="price">${product.price}</p>
       <div className="rating">
         <StarRatings
             rating={product.rating.rate}
