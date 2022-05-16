@@ -316,6 +316,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
 }
 
 .change-quantity:hover {
