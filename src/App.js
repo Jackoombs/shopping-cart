@@ -5,6 +5,7 @@ import Nav from './components/Nav';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import Footer from './components/Footer';
+import Checkout from './pages/Checkout';
 
 function App() {
 
@@ -18,9 +19,17 @@ function App() {
       const data = await response.json()
       setProducts(data)
     }
-
     getItems()
   },[])
+
+  useEffect(() => {
+    const quantitys = basket.map(element => element.quantity)
+    const numberOfItems = quantitys.reduce(
+      (previousValue, currentValue) => previousValue + currentValue,
+      0
+    );
+    console.log(numberOfItems)
+  },[basket])
 
 
   return (
@@ -30,6 +39,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/shop" element={<Shop products={products} setBasket={setBasket} basket={basket}/>} />
+          <Route path="/checkout" element={<Checkout basket={basket}/>} /> 
         </Routes>
         {/* <Footer /> */}
       </div>
