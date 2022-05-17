@@ -8,18 +8,10 @@ function QuantitySelector({ id, quantity, setQuantity, min, max }) {
 
   const increaseQuantity = () => {
     if (quantity < max) setQuantity(quantity => quantity + 1)
-    focusInput()
   }
 
   const decreaseQuantity = () => {
     if (quantity !== min) setQuantity(quantity => quantity - 1)
-    focusInput()
-  }
-
-  const focusInput = () => {
-    if (inputFocus.current) {
-      inputFocus.current.focus()
-    }
   }
 
   return (
