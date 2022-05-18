@@ -19,12 +19,12 @@ function Home() {
       {
         image: Plane,
         alt: "aeroplane",
-        text: "We ship to anywhere within Europe, North America and Aisa"
+        text: "We ship to anywhere within Europe, North America and Aisa."
       },
       {
         image: Helper,
         alt: "customer assistant",
-        text: "We offer life time customer service and a minimum 3 year warranty"
+        text: "We offer life time customer service and a minimum 3 year warranty."
       }
     ]
 

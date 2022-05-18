@@ -38,7 +38,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/shop" element={<Shop products={products} setBasket={setBasket} basket={basket}/>} />
-          <Route path="/checkout" element={<Checkout basket={basket}/>} /> 
+          <Route path="/checkout" element={<Checkout basket={basket} setBasket={setBasket}/>} /> 
         </Routes>
         {/* <Footer /> */}
       </div>
