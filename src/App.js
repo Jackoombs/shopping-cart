@@ -1,11 +1,11 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Switch, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
-import Footer from './components/Footer';
 import Checkout from './pages/Checkout';
+
 
 function App() {
 
@@ -36,9 +36,10 @@ function App() {
       <div className='App'>
         <Nav basketCounter={totalItems}/>
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/shop" element={<Shop products={products} setBasket={setBasket} basket={basket}/>} />
-          <Route path="/checkout" element={<Checkout basket={basket} setBasket={setBasket}/>} /> 
+          <Route path="" exact element={<Home />} />
+          <Route path="shop" element={<Shop products={products} setBasket={setBasket} basket={basket}/>} />
+          <Route path="checkout/*" element={<Checkout basket={basket} setBasket={setBasket}/>} >
+          </Route> 
         </Routes>
         {/* <Footer /> */}
       </div>

@@ -20,7 +20,7 @@ function CheckoutItem({ product, basket, setBasket }) {
         <div className="rating">
           <StarRatings
             rating={product.rating.rate}
-            starRatedColor="#7298a0"
+            starRatedColor="#3e5f66"
             numberOfStars={5}
             name='rating'
             starDimension='30px'
@@ -36,7 +36,6 @@ function CheckoutItem({ product, basket, setBasket }) {
           <FontAwesomeIcon icon={faDeleteLeft} size="3x"/>
         </button>
       </div>
-      
     </div>
   )
 }

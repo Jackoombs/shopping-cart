@@ -24,7 +24,7 @@ function Nav({ basketCounter }) {
           />
         </ul>
       </nav>
-      <Link to={"/checkout"} className="nav-checkout">
+      <Link to={"checkout/basket"} className="nav-checkout">
         <p>Total amount</p>
         <div className="cart-icon">
           <FontAwesomeIcon icon={faShoppingCart} size="xs"/>
