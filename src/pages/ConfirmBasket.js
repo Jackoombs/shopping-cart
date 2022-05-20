@@ -20,9 +20,9 @@ function ConfirmBasket({ basket, setBasket, setBasketDetails, setCheckoutStage})
   const canConfirmBasket = () => {
     return basket.length?
         <CheckoutControls 
-          linkTo="../../checkout/payment"   
+          linkTo="../../checkout/shipping"   
           btnText="Confirm Basket"
-          backButton={true}
+          backButton={false}
           setCheckoutState={setBasketDetails}   
         />:''
   }

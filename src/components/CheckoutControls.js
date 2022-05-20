@@ -17,8 +17,12 @@ function CheckoutControls(props) {
 
   return (
     <div className="checkout-controls">
+
       {showButton()}
-      <button className="checkout-btn">
+
+      <button 
+        className="checkout-btn" 
+        type={props.type}>
         <Link to={props.linkTo}>
           {props.btnText}
         </Link>

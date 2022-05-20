@@ -1,15 +1,16 @@
 import React, { useEffect } from "react";
+import ShippingForm from "../components/ShippingForm";
 
 function ConfirmShipping({ setCheckoutStage }) {
 
   useEffect(() => {
-    setCheckoutStage(3) 
+    setCheckoutStage(2) 
   },[])
 
   return (
-    <div>
-      HI there guys
-    </div>
+    <section className="shipping">
+      <ShippingForm />
+    </section>
   )
 }
 

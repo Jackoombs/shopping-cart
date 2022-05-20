@@ -442,6 +442,7 @@ hr {
   width: fit-content;
   justify-self: center;
   padding: 0 30px;
+  cursor: pointer;
 }
 
 .checkout-btn:hover {
@@ -451,4 +452,44 @@ hr {
 
 .checkout-btn:hover a {
   color: white;
+}
+
+.shipping-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+
+.shipping-inputs {
+  background-color: #d4ebf0;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom:30px ;
+}
+
+.text-input input  {
+  background-color: white;
+  border: 1px #3e5f66 solid;
+  border-radius: 5px;
+  outline: none;
+  color: black;
+  padding: 5px;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.errors {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
